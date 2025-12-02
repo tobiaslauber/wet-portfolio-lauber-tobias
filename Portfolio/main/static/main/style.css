@@ -1,0 +1,67 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+/* Container für die Seiteninhalte */
+.main-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 1.25rem;
+}
+
+.hero {
+    width: 100%;
+    background: linear-gradient(180deg, #b3b4b6, #c1c2c4);
+    padding: 0;
+    height: 12rem;            
+    display: flex;
+    align-items: center;
+}
+
+.hero-inner {
+    max-width: 56rem;       
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    min-width: 40rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Profilbild rechts */
+.hero-image {
+    height: 12rem;        /* <<< gleiche Höhe wie der Header */
+    width: auto;          
+    border-radius: 0.5rem;
+    animation: slideIn 2.8s ease-out forwards;
+}
+
+
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+

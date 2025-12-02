@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-inner">
+            <h1 class="hero-title">Tobias Lauber</h1>
+
+            <img src="{% static 'main/me.webp' %}" 
+                class="hero-image" 
+                alt="Profile Picture">
+        </div>
+    </header>
+
+
+    <div class="main-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
