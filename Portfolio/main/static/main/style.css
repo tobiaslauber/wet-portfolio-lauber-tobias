@@ -44,7 +44,7 @@ body {
 
 /* Profilbild rechts */
 .hero-image {
-    height: 12rem;        /* <<< gleiche Höhe wie der Header */
+    height: 12rem;        
     width: auto;          
     border-radius: 0.5rem;
     animation: slideIn 2.8s ease-out forwards;
@@ -65,3 +65,203 @@ body {
 }
 
 
+/* Contact box */
+.contact-box {
+    background: #e6e7e9;          
+    padding: 2rem;                
+    border-radius: 0.5rem;        
+    margin-top: 2rem;             
+    margin-bottom: 3rem;          
+}
+
+.contact-box p {
+    margin-bottom: 1rem;          /* Abstand zwischen den Absätzen */
+    line-height: 1.5;
+}
+
+.contact-box a {
+    color: #4048e0;              
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Two-column layout inside the contact box */
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+/* Left & right columns */
+.contact-left,
+.contact-right {
+    flex: 1;
+}
+
+/* Right column should NOT be right-aligned */
+.contact-right {
+    text-align: left;
+}
+
+/* Labels like "Email", "Phone" */
+.contact-right .label {
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-left p {
+    margin-bottom: 1rem;   /* Abstand zwischen den Gruppen */
+}
+
+
+
+/* SECTION HEADINGS */
+.main-container h2 {
+    margin-top: 2.5rem;     
+    margin-bottom: 1rem;    
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+}
+
+/* PARAGRAPHS IN MAIN CONTENT */
+.main-container p {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    max-width: 48rem;       /* Macht Textblock schmaler → besser lesbar */
+}
+
+
+
+
+
+/* Thesis list box */
+.thesis-box {
+    background: #e6e7e9;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.thesis-title {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #222;
+}
+
+.thesis-list {
+    list-style: none;         
+    padding-left: 0;
+}
+
+.thesis-list li {
+    margin-bottom: 0.6rem;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+/* Bullet */
+.thesis-list li::before {
+    content: "▸";              
+    position: absolute;
+    left: 0;
+    color: #444;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-category h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.skill-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-badges span {
+    background: #e3e4e6;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    border: 1px solid #c4c5c7;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    cursor: default;
+}
+
+
+.skill-badges span:hover {
+    background: #19a829;    
+    border-color: #022506;    
+    color: #000000;           
+}
+
+
+
+
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+
+.project-card {
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.6rem;
+    background: #fafafa;
+    margin-bottom: 1.25rem;   /* Abstand zwischen Karten */
+}
+
+
+.project-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.project-card a {
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 700px) {
+    .projects-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

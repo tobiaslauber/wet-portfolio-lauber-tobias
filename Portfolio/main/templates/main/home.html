@@ -3,7 +3,166 @@
 {% block title %}Home | Tobias Lauber{% endblock %}
 
 {% block content %}
-    <h2>Welcome to my portfolio!</h2>
-    <p>This is the starting page.</p>
+    <h2>About me</h2>
+    <p>
+        I am currently completing my Bachelor's degree in Data Science at FHNW.
+        My interests include machine learning, medical image processing, computational morphology,
+        and applied algorithm design.
+    </p>
+
+    <h2>Bachelor Thesis</h2>
+
+    <p>
+        My bachelor thesis focuses on the reconstruction of fractured wrist joint surfaces, specifically the distal radius head.
+        The goal of the project is to algorithmically determine how fragmented bone pieces can be repositioned into their 
+        anatomically correct locations. This approach supports orthopedic surgeons during fracture treatment by helping them 
+        identify where each fragment should be aligned before fixation.
+    </p>
+
+    <div class="thesis-box">
+
+        <p class="thesis-title">This work includes:</p>
+
+        <ul class="thesis-list">
+            <li>automatic landmark detection</li>
+            <li>reconstruction of target morphology</li>
+            <li>fragment matching and geometric alignment</li>
+            <li>evaluation of reconstructed bone surfaces</li>
+        </ul>
+
+    </div>
+
+
+    <h2>Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-category">
+            <h3>Programming & Tools</h3>
+            <div class="skill-badges">
+                <span>Python</span>
+                <span>R</span>
+                <span>Django</span>
+                <span>SQL</span>
+                <span>Git</span>
+                <span>Version Control</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Data Science & Machine Learning</h3>
+            <div class="skill-badges">
+                <span>Machine Learning</span>
+                <span>Model Evaluation</span>
+                <span>Data Visualization</span>
+                <span>Data Wrangling</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Statistics & Scientific Computing</h3>
+            <div class="skill-badges">
+                <span>Statistics</span>
+                <span>Scientific Computing</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Data Privacy</h3>
+            <div class="skill-badges">
+                <span>Data Privacy & Data Law</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Professional Skills</h3>
+            <div class="skill-badges">
+                <span>Teamwork</span>
+            </div>
+        </div>
+
+    </div>
+   
+
+
+
+
+    <h2>Study Projects</h2>
+
+    <div class="project-card">
+        <h3>Django Portfolio Website</h3>
+        <p>A personal portfolio website built with Django. Focuses on clean design, modular structure, and deployment-ready architecture.</p>
+        <a class="project-link" href="#" target="_blank">View on GitLab</a>
+    </div>
+
+    <div class="project-card">
+        <h3>GeoJSON map of car-counting measurement stations</h3>
+        <p>An interactive web map showing traffic-counting stations using GeoJSON data. Includes preprocessing, visualization logic, and dynamic map rendering.</p>
+        <a class="project-link" href="#" target="_blank">View on GitLab</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Analysis of Alzheimer’s disease (tabular data + MRI scans)</h3>
+        <p>Data science project combining clinical tables and MRI imaging. Includes preprocessing, feature engineering, and model evaluation.</p>
+        <a class="project-link" href="#" target="_blank">View on GitLab</a>
+    </div>
+
+    <div class="project-card">
+        <h3>Educational Chatbot for Learning Assistance</h3>
+        <p>A conversational agent designed to help users learn concepts. Includes NLP pipeline, model tuning, and user interaction interface.</p>
+        <a class="project-link" href="#" target="_blank">View on GitLab</a>
+    </div>
+
+
+    
+
+
+    <section class="contact-box">
+
+        <h2>Contact</h2>
+
+        <div class="contact-grid">
+
+            <!-- LEFT COLUMN -->
+            <div class="contact-left">
+                <p>Student at <a href="https://www.fhnw.ch">FHNW</a></p>
+
+                <p>University of Applied Sciences and Arts<br>
+                Northwestern Switzerland</p>
+
+                <p>School of Engineering</p>
+
+                <p>Bahnhofstrasse 6<br>
+                CH-5210 Windisch</p>
+            </div>
+
+
+            <!-- RIGHT COLUMN -->
+            <div class="contact-right">
+
+                <p class="label">Email</p>
+                <p>
+                    <a href="mailto:placeholder.email@fhnw.ch">
+                        placeholder.email@fhnw.ch
+                    </a>
+                </p>
+
+                <p class="label">Phone</p>
+                <p>
+                    +41 00 000 00 00
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
 {% endblock %}
+
 
