@@ -1,8 +1,14 @@
-/* Reset */
+/* ────────────────────────── */
+/* RESET & GLOBAL STYLES      */
+/* ────────────────────────── */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 6rem;
 }
 
 body {
@@ -10,24 +16,29 @@ body {
     color: #222;
 }
 
-/* Container für die Seiteninhalte */
+/* ────────────────────────── */
+/* LAYOUT CONTAINER           */
+/* ────────────────────────── */
 .main-container {
     max-width: 56rem;
     margin: 0 auto;
     padding: 1.25rem;
 }
 
+/* ────────────────────────── */
+/* HERO SECTION               */
+/* ────────────────────────── */
 .hero {
     width: 100%;
     background: linear-gradient(180deg, #b3b4b6, #c1c2c4);
     padding: 0;
-    height: 12rem;            
+    height: 12rem;
     display: flex;
     align-items: center;
 }
 
 .hero-inner {
-    max-width: 56rem;       
+    max-width: 56rem;
     margin: 0 auto;
     padding: 0 1.25rem;
     display: flex;
@@ -42,45 +53,37 @@ body {
     font-weight: 700;
 }
 
-/* Profilbild rechts */
 .hero-image {
-    height: 12rem;        
-    width: auto;          
+    height: 12rem;
+    width: auto;
     border-radius: 0.5rem;
     animation: slideIn 2.8s ease-out forwards;
 }
 
-
-
 /* Animation */
 @keyframes slideIn {
-    from {
-        transform: translateX(30px);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
+    from { transform: translateX(30px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
 }
 
-
-/* Contact box */
+/* ────────────────────────── */
+/* CONTACT BOX                */
+/* ────────────────────────── */
 .contact-box {
-    background: #e6e7e9;          
-    padding: 2rem;                
-    border-radius: 0.5rem;        
-    margin-top: 2rem;             
-    margin-bottom: 3rem;          
+    background: #e6e7e9;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
 }
 
 .contact-box p {
-    margin-bottom: 1rem;          /* Abstand zwischen den Absätzen */
+    margin-bottom: 1rem;
     line-height: 1.5;
 }
 
 .contact-box a {
-    color: #4048e0;              
+    color: #4048e0;
     text-decoration: none;
 }
 
@@ -88,9 +91,7 @@ body {
     text-decoration: underline;
 }
 
-
-
-/* Two-column layout inside the contact box */
+/* Grid */
 .contact-grid {
     display: flex;
     justify-content: space-between;
@@ -98,18 +99,15 @@ body {
     gap: 3rem;
 }
 
-/* Left & right columns */
 .contact-left,
 .contact-right {
     flex: 1;
 }
 
-/* Right column should NOT be right-aligned */
 .contact-right {
     text-align: left;
 }
 
-/* Labels like "Email", "Phone" */
 .contact-right .label {
     font-weight: bold;
     margin-top: 1rem;
@@ -117,33 +115,30 @@ body {
 }
 
 .contact-left p {
-    margin-bottom: 1rem;   /* Abstand zwischen den Gruppen */
+    margin-bottom: 1rem;
 }
 
-
-
-/* SECTION HEADINGS */
+/* ────────────────────────── */
+/* MAIN CONTENT               */
+/* ────────────────────────── */
 .main-container h2 {
-    margin-top: 2.5rem;     
-    margin-bottom: 1rem;    
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 700;
     color: #222;
 }
 
-/* PARAGRAPHS IN MAIN CONTENT */
 .main-container p {
     line-height: 1.6;
     font-size: 1.05rem;
     margin-bottom: 1.2rem;
-    max-width: 48rem;       /* Macht Textblock schmaler → besser lesbar */
+    max-width: 48rem;
 }
 
-
-
-
-
-/* Thesis list box */
+/* ────────────────────────── */
+/* THESIS BOX                 */
+/* ────────────────────────── */
 .thesis-box {
     background: #e6e7e9;
     padding: 1.5rem;
@@ -158,7 +153,7 @@ body {
 }
 
 .thesis-list {
-    list-style: none;         
+    list-style: none;
     padding-left: 0;
 }
 
@@ -169,20 +164,18 @@ body {
     line-height: 1.5;
 }
 
-/* Bullet */
+/* Custom Bullet */
 .thesis-list li::before {
-    content: "▸";              
+    content: "▸";
     position: absolute;
     left: 0;
     color: #444;
     font-size: 1rem;
 }
 
-
-
-
-
-
+/* ────────────────────────── */
+/* SKILLS GRID                */
+/* ────────────────────────── */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
@@ -212,18 +205,15 @@ body {
     cursor: default;
 }
 
-
 .skill-badges span:hover {
-    background: #19a829;    
-    border-color: #022506;    
-    color: #000000;           
+    background: #19a829;
+    border-color: #022506;
+    color: #000000;
 }
 
-
-
-
-
-
+/* ────────────────────────── */
+/* PROJECTS GRID              */
+/* ────────────────────────── */
 .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -231,15 +221,13 @@ body {
     margin-bottom: 3rem;
 }
 
-
 .project-card {
     padding: 1.5rem;
     border: 1px solid #e0e0e0;
     border-radius: 0.6rem;
     background: #fafafa;
-    margin-bottom: 1.25rem;   /* Abstand zwischen Karten */
+    margin-bottom: 1.25rem;
 }
-
 
 .project-card h3 {
     margin-bottom: 0.5rem;
@@ -260,8 +248,73 @@ body {
     text-decoration: underline;
 }
 
+/* ────────────────────────── */
+/* SUB-NAV                    */
+/* ────────────────────────── */
+.sub-nav {
+    width: 100%;
+    background: #e6e6e6;
+    padding: 0.6rem 0;
+    
+    display: flex;
+    flex-wrap: wrap;        /* Links dürfen umbrechen */
+    justify-content: center;
+    gap: 0.6rem;            /* Gleichmäßige Abstände */
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    
+    display: inline-block;
+    padding: 0.25rem 0.75rem; /* Besser klickbar */
+    border-radius: 0.4rem;    /* Sieht moderne aus */
+}
+
+.sub-nav a:hover {
+    background: #d2d2d2;     /* Dezenter Hover */
+}
+
+/* Kleinere Mobile-Screens */
+@media (max-width: 450px) {
+    .sub-nav a {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.55rem;
+    }
+}
+
+
+/* ────────────────────────── */
+/* RESPONSIVE DESIGN          */
+/* ────────────────────────── */
 @media (min-width: 700px) {
     .projects-grid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .hero-inner {
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 0.75rem;
+        justify-content: flex-start;
+        gap: 0.75rem;
+    }
+
+    .hero-image {
+        height: 9rem;
+        width: auto;
+        object-fit: cover;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
     }
 }
