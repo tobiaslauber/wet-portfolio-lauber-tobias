@@ -1,0 +1,23 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block title %}CV | Tobias Lauber{% endblock %}
+
+{% block content %}
+    <h2>Curriculum Vitae</h2>
+
+    <p>
+        I am currently completing my Bachelor's degree in Data Science at FHNW, with practical experience in data analysis and applied machine learning gained through academic projects.
+        I enjoy solving algorithmic problems and collaborating in interdisciplinary teams, where I can both learn from others and contribute my own knowledge.
+    </p>
+
+    <p>
+        Below you can open my full CV as a PDF document.
+    </p>
+
+    <a href="{% static 'main/cv.pdf' %}" target="_blank" class="project-link cv-button">
+        Open CV (German)
+    </a>
+
+{% endblock %}

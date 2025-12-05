@@ -57,12 +57,12 @@ body {
     height: 12rem;
     width: auto;
     border-radius: 0.5rem;
-    animation: slideIn 2.8s ease-out forwards;
+    animation: slideIn 1.4s ease-out forwards;
 }
 
 /* Animation */
 @keyframes slideIn {
-    from { transform: translateX(30px); opacity: 0; }
+    from { transform: translateX(40rem); opacity: 0; }
     to   { transform: translateX(0); opacity: 1; }
 }
 
