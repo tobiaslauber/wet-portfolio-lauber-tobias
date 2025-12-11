@@ -90,29 +90,28 @@
 
     <h2 id="projects">Study Projects</h2>
 
-    <div class="project-card">
-        <h3>Django Portfolio Website</h3>
-        <p>A personal portfolio website built with Django. Focuses on clean design, modular structure, and deployment-ready architecture.</p>
-        <a class="project-link" href="https://gitlab.fhnw.ch/wet/hs25/wet-portfolio-lauber-tobias" target="_blank">View on GitLab</a>
-    </div>
+    {% for project in projects %}
+        <div class="project-card">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <a class="project-link" href="{{ project.gitlab_url }}" target="_blank">
+                View on GitLab
+            </a>
 
-    <div class="project-card">
-        <h3>GeoJSON map of car-counting measurement stations</h3>
-        <p>An interactive web map showing traffic-counting stations using GeoJSON data. Includes preprocessing, visualization logic, and dynamic map rendering.</p>
-        <a class="project-link" href="https://gitlab.fhnw.ch/ds-data-visualization/ivi_gdv_van/hs25/tobias-lauber/ivi" target="_blank">View on GitLab</a>
-    </div>
+            <!-- Skills dieses Projekts anzeigen -->
+            {% if project.skills.all %}
+                <p>
+                    <strong>Skills:</strong>
+                    {% for skill in project.skills.all %}
+                        {{ skill.name }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+            {% endif %}
+        </div>
+    {% empty %}
+        <p>No projects available.</p>
+    {% endfor %}
 
-    <div class="project-card">
-        <h3>Analysis of Alzheimer’s disease (tabular data + MRI scans)</h3>
-        <p>Data science project combining clinical tables and MRI imaging. Includes preprocessing, feature engineering, and model evaluation.</p>
-        <a class="project-link" href="https://gitlab.fhnw.ch/cml1/exploration" target="_blank">View on GitLab</a>
-    </div>
-
-    <div class="project-card">
-        <h3>Educational Chatbot for Learning Assistance</h3>
-        <p>A conversational agent designed to help users learn concepts. Includes NLP pipeline, model tuning, and user interaction interface.</p>
-        <a class="project-link" href="https://gitlab.fhnw.ch/tobias.lauber1/nlp_challenge_data_chatbot" target="_blank">View on GitLab</a>
-    </div>
 
 
     
