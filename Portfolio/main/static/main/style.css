@@ -307,3 +307,35 @@ body {
         font-size: 2.3rem;
     }
 }
+
+
+
+/* ────────────────────────── */
+/* PROJECT FILTER (SEARCH)    */
+/* ────────────────────────── */
+.project-filter {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-filter-title {
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.project-filter-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.project-filter-form input {
+    padding: 0.4rem 0.6rem;
+    width: 60%;
+    max-width: 20rem;
+}
+
+.project-filter-form button {
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}

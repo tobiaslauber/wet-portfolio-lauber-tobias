@@ -88,7 +88,22 @@
 
 
 
+
     <h2 id="projects">Study Projects</h2>
+
+    <div class="project-filter">
+        <p class="project-filter-title">Filter projects by skill/name</p>
+
+        <form method="get" action="#projects" class="project-filter-form">
+            <input 
+                type="text" 
+                name="q" 
+                placeholder="Search by project title or skill..."
+                value="{{ request.GET.q }}"
+            >
+            <button type="submit">Search</button>
+        </form>
+    </div>
 
     {% for project in projects %}
         <div class="project-card">

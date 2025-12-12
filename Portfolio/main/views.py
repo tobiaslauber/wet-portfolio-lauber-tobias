@@ -1,13 +1,21 @@
 from django.shortcuts import render
+from django.db.models import Q
 from .models import Project, Skill
 
 
 def home(request):
-    # Alle Projekte und Skills aus der Datenbank holen
+    query = request.GET.get("q", "")
+
     projects = Project.objects.all()
+
+    if query:
+        projects = projects.filter(
+            Q(title__icontains=query) |
+            Q(skills__name__icontains=query)
+        ).distinct()
+
     skills = Skill.objects.all()
 
-    # An das Template schicken
     return render(request, "main/home.html", {
         "projects": projects,
         "skills": skills,
@@ -16,3 +24,4 @@ def home(request):
 
 def cv(request):
     return render(request, "main/cv.html")
+
