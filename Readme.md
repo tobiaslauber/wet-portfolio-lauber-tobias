@@ -27,6 +27,8 @@ Danach den Django-Entwicklungsserver starten:
 python manage.py runserver
 ```
 
+Es muss jedoch ein eigener Djangokey in einem .env File erstellt werden.
+
 Die Webseite ist anschließend im Browser unter http://127.0.0.1:8000/ erreichbar.
 
 
@@ -77,7 +79,7 @@ Die Ordnerstruktur des Portfolio-Projekts folgt der üblichen Django-Projektstru
 
 Der Code wurde grösstenteils selbst geschrieben. Einige wenige Korrekturen von ChatGPT wurden übernommen, jedoch nur, nachdem sie vollständig verstanden wurden.
 
-KI wurde hauptsächlich als Lernhilfe eingesetzt, insbesondere um zu verstehen, warum bestimmter Code nicht funktionierte oder weshalb Fehlermeldungen auftraten. Sie diente dabei als Unterstützung beim Nachvollziehen von Konzepten und bei der Fehlersuche, jedoch nicht als Ersatz für eigenes Denken oder eigenständiges Programmieren.
+KI wurde hauptsächlich als Lernhilfe für Django eingesetzt, insbesondere um zu verstehen, warum bestimmter Code nicht funktionierte oder weshalb Fehlermeldungen auftraten. Sie diente dabei als Unterstützung beim Nachvollziehen von Konzepten und bei der Fehlersuche, jedoch nicht als Ersatz für eigenes Denken oder eigenständiges Programmieren.
 
 
 ### Stärken der KI
